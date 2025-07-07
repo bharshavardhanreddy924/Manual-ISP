@@ -26,7 +26,7 @@ class ImageProcessor:
 
 def main():
     st.set_page_config(
-        page_title="Image Signal Processing",
+        page_title="Image Signal Processing - Emmetra",
         layout="wide",
         initial_sidebar_state="expanded",
     )
@@ -53,7 +53,7 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    st.title("Image Signal Processing")
+    st.title("Image Signal Processing - Emmetra")
 
     # Initialize session state for images and processing stage
     if 'original_image' not in st.session_state:
