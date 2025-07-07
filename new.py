@@ -160,7 +160,13 @@ def main():
     if st.session_state.processed_image is not None:
         # Convert the image from BGR to RGB for display
         image_rgb = cv2.cvtColor(st.session_state.processed_image, cv2.COLOR_BGR2RGB)
-        st.image(image_rgb, use_container_width =True)
+# Resize to 70% of the original dimensions
+        height, width = image_rgb.shape[:2]
+        resized_image = cv2.resize(image_rgb, (int(width * 0.7), int(height * 0.7)))
+
+# Display the resized image
+        st.image(resized_image)
+
     else:
         st.info("Please load an image to begin processing.")
 
