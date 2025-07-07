@@ -164,7 +164,7 @@ def main():
         # Create a centered column to display the image at 70% width
         col1, col2, col3 = st.columns([0.15, 0.7, 0.15])  # 15% + 70% + 15% = 100%
         with col2:
-            st.image(image_rgb, use_column_width=True)
+            st.image(image_rgb, use_container_width=True)
     else:
         st.info("Please load an image to begin processing.")
 
